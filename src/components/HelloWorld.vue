@@ -15,7 +15,7 @@
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">Welcome to Poyo</h1>
         <p>count: {{ state.count }}, double: {{ state.double }}</p>
-        <v-btn class="mr-4" @click="increment">ぽよ</v-btn>
+        <v-btn color="secondary" class="mr-4" @click="increment">ぽよ</v-btn>
       </v-col>
     </v-row>
 

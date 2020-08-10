@@ -1,8 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import VueCompositionApi from "@vue/composition-api";
+import VueCompositionApi, { provide } from "@vue/composition-api";
+import { DefaultApolloClient } from "@vue/apollo-composable";
 import vuetify from "./plugins/vuetify";
+import { apolloClient } from "./vue-apollo";
 
 Vue.use(VueCompositionApi);
 
@@ -11,5 +13,9 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   vuetify,
-  render: h => h(App)
+  setup: function() {
+    provide(DefaultApolloClient, apolloClient);
+    return {};
+  },
+  render: (h) => h(App),
 }).$mount("#app");

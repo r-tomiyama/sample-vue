@@ -14,8 +14,8 @@ export default new Vuetify({
         accent: colors.lime.darken2,
         success: colors.teal.lighten1,
         error: colors.red.lighten2,
-        anchor: colors.blueGrey.lighten1,
-      },
-    },
-  },
+        anchor: colors.blueGrey.lighten1
+      }
+    }
+  }
 });

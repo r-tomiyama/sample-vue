@@ -33,25 +33,19 @@
       </v-btn>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld />
-    </v-content>
+    <v-main>
+      <router-view />
+    </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import { defineComponent } from "@vue/composition-api";
 
-export default Vue.extend({
+export default defineComponent({
   name: "App",
-
-  components: {
-    HelloWorld
-  },
-
-  data: () => ({
-    //
-  })
+  setup() {
+    return {};
+  }
 });
 </script>

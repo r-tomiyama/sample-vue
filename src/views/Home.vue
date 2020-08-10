@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-container>
+    <v-row>
+      <h1>サンプルページ</h1>
+    </v-row>
+    <CharacterList :characters="characters" />
+  </v-container>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<script lang="ts">
+import CharacterList from "@/components/CharacterList.vue";
+import { defineComponent } from "@vue/composition-api";
 
-export default {
-  name: "Home",
+export default defineComponent({
+  name: "SamplePage",
   components: {
-    HelloWorld
+    CharacterList
+  },
+  setup() {
+    const characters = [
+      { id: 1, name: "hoge" },
+      { id: 2, name: "fuga" }
+    ];
+
+    return {
+      characters
+    };
   }
-};
+});
 </script>
